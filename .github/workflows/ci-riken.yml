@@ -42,5 +42,5 @@ jobs:
             # Name of the artifact to download. If unspecified, all artifacts for the run are downloaded.
             name: hex_hello_world
             # Destination path. Supports basic tilde expansion. Defaults to $GITHUB_WORKSPACE
-            path: /home/runner/work/matrix_github_practice/hex_hello_world
+            path: /home/runner/work/matrix_github_practice/matrix_github_practice
              
