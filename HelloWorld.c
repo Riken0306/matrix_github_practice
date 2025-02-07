@@ -5,4 +5,7 @@ int main(){
   printf("Run Pipeline!\n");
   printf("Run Pipeline! Again!\n");
   printf("Test Actions\n");
+
+  //conflict
+  printf("matrix-conflict-2");
 }
