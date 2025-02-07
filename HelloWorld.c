@@ -6,6 +6,9 @@ int main(){
   printf("Run Pipeline! Again!\n");
   printf("Test Actions\n");
 
-  //conflict
+  //feature 2
   printf("matrix-conflict-2");
+
+  //feature 1
+  printf("riken-conflict-1");
 }
