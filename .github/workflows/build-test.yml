@@ -1,31 +1,23 @@
-# This is a workflow to download the artifact from CI-riken and run it
 name: CI-build-test
 
-# Define when this workflow should run
 on:
-  # This workflow will run when the 'CI-riken' workflow completes successfully
   workflow_run:
     workflows: ["CI-riken"]
     types:
       - completed
 
 jobs:
-  # Job to download and run the build artifact
-  download-and-run:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      # Check out the code (in case you need it for any future steps)
-      - uses: actions/checkout@v4
-
-      # Download the artifact created in CI-riken workflow
-      - name: Download hex_hello_world artifact
-        uses: actions/download-artifact@v2
+      - name: Download artifact
+        uses: actions/download-artifact@v4.1.8
         with:
           name: hex_hello_world
 
-      # Run the downloaded build artifact
-      - name: Run hex_hello_world
-        run: |
-          chmod +x ./hex_hello_world
-          ./hex_hello_world
+      - name: Set permissions
+        run: chmod +x hex_hello_world
+
+      - name: Run binary
+        run: ./hex_hello_world
