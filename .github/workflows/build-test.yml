@@ -20,7 +20,7 @@ jobs:
 
       # Download the artifact created in CI-riken workflow
       - name: Download hex_hello_world artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v2
         with:
           name: hex_hello_world
 
